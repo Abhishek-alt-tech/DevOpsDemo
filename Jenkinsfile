@@ -37,7 +37,7 @@ node {
 }
     stage('Docker push'){
         
-        sh "docker tag 1b33c71e2a70   abhishekalttech/myapplication" //must change the name
+        sh "docker tag 361590a3dee0   abhishekalttech/myapplication" //must change the name
         sh "docker push   abhishekalttech/myapplication"
   }
 }
