@@ -1,7 +1,5 @@
 node {
-    // reference to maven
-    // ** NOTE: This 'maven-3.5.2' Maven tool must be configured in the Jenkins Global Configuration.   
-    def mvnHome = tool 'maven-3.5.2'
+    def mvnHome = tool 'maven'
 
     // holds reference to docker image
     def dockerImage
@@ -9,13 +7,12 @@ node {
  
     def dockerImageTag = "devopsexample${env.BUILD_NUMBER}"
     
-    stage('Clone Repo') { // for display purposes
+    stage('Clone Repo') { 
       // Get some code from a GitHub repository
       git 'https://github.com/vikas4cloud/DevOps-Example.git'
       // Get the Maven tool.
-      // ** NOTE: This 'maven-3.5.2' Maven tool must be configured
-      // **       in the global configuration.           
-      mvnHome = tool 'maven-3.5.2'
+               
+      mvnHome = tool 'maven'
     }    
   
     stage('Build Project') {
@@ -37,7 +34,7 @@ node {
 }
     stage('Docker push'){
         
-        sh "docker tag 1b33c71e2a70   abhishekalttech/myapplication" //must change the name
+        sh "docker tag 361590a3dee0   abhishekalttech/myapplication" //must change the name
         sh "docker push   abhishekalttech/myapplication"
   }
 }
