@@ -60,6 +60,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!--
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -68,10 +69,18 @@
 					<source>11</source>
 					<target>11</target>
 					<jdkToolchain>
-						<version>8</version>
+						<version>11</version>
 					</jdkToolchain>
 				</configuration>
-			</plugin>
+			</plugin>-->
+			<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.8.0</version>
+    <configuration>
+        <release>11</release>  <!--or <release>10</release>-->
+    </configuration>
+</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
