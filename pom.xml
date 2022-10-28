@@ -68,7 +68,7 @@
 					<source>11</source>
 					<target>11</target>
 					<jdkToolchain>
-						<version>8</version>
+						<version>11</version>
 					</jdkToolchain>
 				</configuration>
 			</plugin>
