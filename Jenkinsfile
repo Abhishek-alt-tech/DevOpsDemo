@@ -1,4 +1,5 @@
 node {
+
     def mvnHome = tool 'maven'
 
     // holds reference to docker image
@@ -9,9 +10,9 @@ node {
     
     stage('Clone Repo') { 
       // Get some code from a GitHub repository
-      git 'https://github.com/vikas4cloud/DevOps-Example.git'
+      git 'https://github.com/Abhishek-alt-tech/DevOpsDemo.git'
       // Get the Maven tool.
-               
+
       mvnHome = tool 'maven'
     }    
   
@@ -30,7 +31,7 @@ node {
       echo "Docker Image Tag Name: ${dockerImageTag}"
 	  
         sh "docker images"
-        sh "docker login -u abhishekalttech -p "
+        sh "docker login -u abhishekalttech -p Aabhishek@2022"
 }
     stage('Docker push'){
         
